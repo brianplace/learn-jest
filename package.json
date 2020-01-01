@@ -1,0 +1,42 @@
+{
+  "name": "electron-react-typescript-template",
+  "version": "1.0.0",
+  "main": "./dist/main.js",
+  "scripts": {
+    "start": "npm run build && electron .",
+    "dev": "webpack -d --watch",
+    "build": "webpack --env production",
+    "postinstall": "ncu -u && npm update && node packageCleanup.js && npm install",
+    "package": "npm run build-mac && npm run build-win && npm run build-linux",
+    "build-mac": "electron-packager . --platform=darwin --out=deployed-app --asar --overwrite",
+    "build-win": "electron-packager . --platform=win32 --out=deployed-app --asar --overwrite",
+    "build-linux": "electron-packager . --platform=linux --out=deployed-app --asar --overwrite"  
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "devtron": "^1.4.0",
+    "electron": "^7.1.5",
+    "electron-debug": "^3.0.1",
+    "electron-packager": "^14.1.1",
+    "npm-check-updates": "^4.0.1",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
