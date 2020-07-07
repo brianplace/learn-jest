@@ -26,7 +26,7 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "devtron": "^1.4.0",
-    "electron": "^7.1.5",
+    "electron": "^7.2.4",
     "electron-debug": "^3.0.1",
     "electron-packager": "^14.1.1",
     "npm-check-updates": "^4.0.1",
